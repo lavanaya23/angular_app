@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { Data } from '../models/data';
 // import * as EventEmitter from 'events';
@@ -11,7 +11,7 @@ import { Data } from '../models/data';
 export class CardlistsComponent implements OnInit {
   details: Data[];
   loader: boolean = true;
-  // @Output('classBool') classBool = new EventEmitter();
+  @Output('classBool') classBool = new EventEmitter();
   constructor(private apiservice: ApiService) { }
 
   ngOnInit(): void {
@@ -21,7 +21,7 @@ export class CardlistsComponent implements OnInit {
 
       console.log(this.details);
       this.loader = false;
-      // this.classBool.emit("true");
+      this.classBool.emit(true);
     })
     // this.loader=false;
   }

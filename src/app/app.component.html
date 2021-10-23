@@ -1,5 +1,5 @@
 <div class="h-100vh">
-  <div class="page" >
+  <div  [ngClass]="showHeight?'page1':'page'">
     <div class="page-single">
       <div class="container">
         <div class="row mt-2">
@@ -16,7 +16,7 @@
                     </div>
                   </div>
                   <div class="card-body d-flex align-items-center justify-content-center">
-                    <app-cardlists ></app-cardlists>
+                    <app-cardlists (classBool)="showPage($event)"></app-cardlists>
                   </div>
                 </div>
               </div>

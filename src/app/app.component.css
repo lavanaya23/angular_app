@@ -37,7 +37,17 @@
   background-image:linear-gradient(white,black);
 
 }
-
+.page1{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image:linear-gradient(white,black);
+  
+}
 .page-single {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
